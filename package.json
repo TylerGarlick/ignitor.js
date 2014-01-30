@@ -1,0 +1,38 @@
+{
+  "name": "arango-odm",
+  "version": "0.0.1",
+  "description": "ArangoDB's object data model",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TylerGarlick/arangodb-odm.git"
+  },
+  "keywords": [
+    "ArangoDB",
+    "ORM",
+    "ArangoDB",
+    "ODM",
+    "ODM"
+  ],
+  "author": "Tyler Garlick",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TylerGarlick/arangodb-odm/issues"
+  },
+  "homepage": "https://github.com/TylerGarlick/arangodb-odm",
+  "dependencies": {
+    "jsonschema": "~0.4.0",
+    "inflection": "~1.3.3",
+    "lodash": "~2.4.1",
+    "q": "~1.0.0"
+  },
+  "devDependencies": {
+    "expect.js": "~0.2.0",
+    "mocha": "~1.17.1",
+    "gulp-util": "~2.2.12",
+    "gulp": "~3.4.0"
+  }
+}

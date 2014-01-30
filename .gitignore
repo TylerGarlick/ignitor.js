@@ -1,3 +1,7 @@
+# ----------------------------
+# Node
+# ----------------------------
+
 lib-cov
 *.seed
 *.log
@@ -13,3 +17,65 @@ results
 
 npm-debug.log
 node_modules
+settings.json
+
+# ----------------------------
+# Webstorm
+# ----------------------------
+
+*.iml
+*.ipr
+*.iws
+.idea/
+
+
+# ----------------------------
+# OSX
+# ----------------------------
+
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+
+# ----------------------------
+# Windows
+# ----------------------------
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+############################
+# tmp, editor & OS files
+############################
+.tmp
+*.swo
+*.swp
+*.swn
+*.swm
+.DS_STORE
+*#
+*~
+.idea
+nbproject
+
+
+############################
+# Tests
+############################
+testApp
