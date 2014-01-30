@@ -7,15 +7,18 @@
     "test": "mocha test"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/TylerGarlick/arangodb-odm.git"
+    "kind": "git",
+    "url": "https://github.com/TylerGarlick/ignitor.js.git"
   },
   "keywords": [
     "ArangoDB",
     "ORM",
     "ArangoDB",
-    "ODM",
-    "ODM"
+    "Arango ODM",
+    "ArangoDB ODM",
+    "ArangoDB Models",
+    "Modeling",
+    "Arango Modeling"
   ],
   "author": "Tyler Garlick",
   "license": "MIT",
@@ -24,14 +27,14 @@
   },
   "homepage": "https://github.com/TylerGarlick/ignitor.js",
   "dependencies": {
-    "jsonschema": "~0.4.0",
     "inflection": "~1.3.3",
     "lodash": "~2.4.1",
     "q": "~1.0.0",
     "arango": "~0.4.1",
     "i": "~0.3.2",
-    "minioc": "~0.2.0",
-    "minioc-loader": "~0.3.1"
+    "dbc.js": "~1.0.1",
+    "moment": "~2.5.1",
+    "nconf": "~0.6.9"
   },
   "devDependencies": {
     "expect.js": "~0.2.0",

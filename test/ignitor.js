@@ -1,38 +1,26 @@
 "use strict";
 
 var Ignitor = require('../lib')
-  , Schema = Ignitor.Schema
   , expect = require('expect.js')
   , _ = require('lodash')
   ;
 
 describe('Ignitor', function () {
 
-  beforeEach(function () {
-    Ignitor.clearRegistrations();
+  describe('db', function () {
+    it('should be setup properly', function () {
+      expect(Ignitor.db).to.be.ok();
+    });
   });
 
-  it('should have no registrations', function () {
-    var modelKeys = Ignitor._getModelKeys();
-    expect(modelKeys.length).to.be(0);
-  });
 
-  it('should allow save models to registrations', function () {
-    var modelKeys = Ignitor._getModelKeys();
-    expect(modelKeys.length).to.be(0);
+  describe('_configuration', function () {
+    it("should be setup properly", function () {
+      expect(Ignitor._configuration).to.be.ok();
+      expect(Ignitor._configuration.database).to.be.ok();
+    });
 
-    Ignitor.model('Person', new Schema({
-      name: {
-        type: 'String',
-        required: true
-      }
-    }));
-
-    modelKeys = Ignitor._getModelKeys();
-    expect(modelKeys.length).to.be(1);
-    expect(Ignitor.model('Person')).to.be.ok();
 
   });
-
 
 });
