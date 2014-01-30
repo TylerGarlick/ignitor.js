@@ -34,12 +34,15 @@
     "i": "~0.3.2",
     "dbc.js": "~1.0.1",
     "moment": "~2.5.1",
-    "nconf": "~0.6.9"
+    "nconf": "~0.6.9",
+    "cocktail": "~0.5.0"
   },
   "devDependencies": {
     "expect.js": "~0.2.0",
     "mocha": "~1.17.1",
     "gulp-util": "~2.2.12",
-    "gulp": "~3.4.0"
+    "gulp": "~3.4.0",
+    "better-assert": "~1.0.0",
+    "should": "~3.1.2"
   }
 }
