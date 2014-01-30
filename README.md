@@ -29,4 +29,34 @@ Ignitor.db.use('anotherDb'); // switch to another db
 ```
 
 ##### Models
-Models are essential to validation and setting up Querying (which is super awesome using the AQL).  Defining an module
+Models are essential to validation and setting up Querying (which is super awesome using the AQL).  Defining an model is simple.  Say we wanted a person model.
+
+```js
+var Ignitor = require('ignitor.js')
+    , Schema = require('ignitor.js').Schema
+    ;
+    
+var PersonSchema = new Schema({
+  name: {
+    type: 'string',
+    minLength: 2, // Optional
+    maxLength: 256 // Optional
+  },
+  age: {
+    type: 'numeric',
+    min: 0,
+    max: 99,
+    default: 18
+  },
+  isActive: {
+    type: 'boolean',
+    default: true
+  }
+});
+
+var Person = Ignitor.model('Person', PersonSchema);
+module.exports = Person;
+
+
+```
+
