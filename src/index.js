@@ -14,6 +14,8 @@ function Ignitor(options) {
   options = options || {
     pluralization: true
   };
+
+  this.connectionString = options.connectionString;
 }
 
 
@@ -28,7 +30,15 @@ Ignitor.prototype._getModelKeys = function () {
   return keys;
 };
 
+Ignitor.prototype.connectionString = null;
+
 Ignitor.prototype.connect = function (connectionString) {
+  var self = this;
+  connectionString = connectionString || self.connectionString;
+  self.connectionString = connectionString;
+  if (!self.connectionString)
+    throw new Error('You must pass a connection string or set on in the options.  Ignitor.connectionString');
+
 
 };
 
