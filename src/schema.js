@@ -3,7 +3,9 @@ var _ = require('lodash')
   ;
 
 function Schema(obj) {
-  _.assign(this, obj);
+  var self = this;
+  obj = obj || {};
+  _.assign(self, obj);
 }
 
 
