@@ -1,7 +1,7 @@
 "use strict";
 
 var expect = require('expect.js')
-  , Ignitor = require('../src')
+  , Ignitor = require('../lib')
   , Schema = Ignitor.Schema
   , Model = Ignitor.Model
   , util = require('util')

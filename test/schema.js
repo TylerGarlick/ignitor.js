@@ -1,7 +1,7 @@
 "use strict";
 
 var expect = require('expect.js')
-  , Schema = require('../src').Schema
+  , Schema = require('../lib').Schema
   ;
 
 

@@ -1,6 +1,6 @@
 "use strict";
 
-var Ignitor = require('../src')
+var Ignitor = require('../lib')
   , Schema = Ignitor.Schema
   , expect = require('expect.js')
   , _ = require('lodash')

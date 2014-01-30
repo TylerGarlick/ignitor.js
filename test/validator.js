@@ -1,7 +1,7 @@
 "use strict";
 
 var expect = require('expect.js')
-  , Validator = require('../src/validator')
+  , Validator = require('../lib/validator')
   ;
 
 describe('Validator', function () {
