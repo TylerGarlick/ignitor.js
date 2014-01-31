@@ -1,0 +1,34 @@
+{
+  "name": "ignitor.js",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://TylerGarlick@github.com/TylerGarlick/ignitor.js.git"
+  },
+  "keywords": [
+    "ArangoDB"
+  ],
+  "author": "Tyler Garlick",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TylerGarlick/ignitor.js/issues"
+  },
+  "homepage": "https://github.com/TylerGarlick/ignitor.js",
+  "devDependencies": {
+    "should": "~3.1.2",
+    "mocha": "~1.17.1",
+    "gulp": "~3.5.0",
+    "gulp-coffee": "~1.4.0",
+    "gulp-util": "~2.2.13"
+  },
+  "dependencies": {
+    "coffee-script": "~1.7.1",
+    "underscore": "~1.5.2",
+    "dbc.js": "~1.0.1"
+  }
+}

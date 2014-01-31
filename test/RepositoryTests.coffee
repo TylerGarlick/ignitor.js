@@ -1,0 +1,4 @@
+describe 'Repositories', ->
+
+  describe 'BasicRepository', ->
+
