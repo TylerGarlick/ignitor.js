@@ -1,7 +1,5 @@
 class Ignitor
-  db: {}
-  config: {}
+  constructor: (@db = {}, @config = {}) ->
 
 
-
-exports = module.exports = new Ignitor
+module.exports = new Ignitor()

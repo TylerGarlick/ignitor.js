@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "Ignitor.js",
+  "sourceRoot": "",
+  "sources": [
+    "Ignitor.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAA,MAAA,OAAA;;AAAA,EAAM;AACS,IAAA,iBAAE,EAAF,EAAY,MAAZ,GAAA;AAA0B,MAAzB,IAAC,CAAA,kBAAA,KAAK,EAAmB,CAAA;AAAA,MAAf,IAAC,CAAA,0BAAA,SAAS,EAAK,CAA1B;IAAA,CAAb;;mBAAA;;MADF,CAAA;;AAAA,EAIA,MAAM,CAAC,OAAP,GAAqB,IAAA,OAAA,CAAA,CAJrB,CAAA;AAAA"
+}

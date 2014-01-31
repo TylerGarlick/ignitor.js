@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "Date.js",
+  "sourceRoot": "",
+  "sources": [
+    "Date.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAA,MAAA,eAAA;IAAA;mSAAA;;AAAA,EAAA,SAAA,GAAY,OAAA,CAAQ,aAAR,CAAZ,CAAA;;AAAA,EAEM;AACJ,2BAAA,CAAA;;AAAa,IAAA,cAAA,GAAA;AACX,MAAA,uCAAA,SAAA,CAAA,CADW;IAAA,CAAb;;gBAAA;;KADiB,UAFnB,CAAA;;AAAA,EAMA,MAAM,CAAC,OAAP,GAAiB,IANjB,CAAA;AAAA"
+}
