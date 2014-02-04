@@ -1,4 +1,7 @@
---compilers coffee:coffee-script/register
 --require should
 --recursive
 --colors
+--ui bdd
+--reporter Spec
+--growl
+--slow 75
