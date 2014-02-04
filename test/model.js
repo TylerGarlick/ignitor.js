@@ -55,12 +55,12 @@ describe('Model', function () {
     describe('.toJSON()', function () {
       it('should not have any keys that begin with _', function () {
         var model = new Model({
-          _private: "private",
+          __: "private",
           name: "blah"
         });
         model.toJSON().should.have.property('name');
         model.toJSON().name.should.be.equal('blah', ".name should be 'blah'");
-        model.toJSON().should.not.have.property('_private');
+        model.toJSON().should.not.have.property('__');
       });
     });
 
