@@ -1,0 +1,4 @@
+ignitor.js
+==========
+
+ArangoDB ODM
