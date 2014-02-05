@@ -1,24 +1,24 @@
 "use strict";
 
 var Ignitor = require('../src/ignitor')
-  , Repository = require('../src/repository')
-  ;
+    , Repository = require('../src/repository')
+    ;
 describe('Repository', function () {
 
-  describe('prototype', function () {
+    describe('prototype', function () {
 
-    var repository;
-    beforeEach(function () {
-      var db = Ignitor.connect();
-      repository = new Repository("RepositoryTesting", db);
-      repository.should.be.ok;
-    });
+        var repository;
+        beforeEach(function () {
+            var db = Ignitor.connect();
+            repository = new Repository("RepositoryTesting", db);
+            repository.should.be.ok;
+        });
 
-    describe('db', function () {
-      it('should set when repository is instantiated', function () {
-        repository.db.should.be.ok;
-      });
-    });
+        describe('db', function () {
+            it('should set when repository is instantiated', function () {
+                repository.db.should.be.ok;
+            });
+        });
 
 //    describe(".all()", function () {
 //      it('should be defined', function () {
@@ -58,5 +58,5 @@ describe('Repository', function () {
 //
 //    });
 
-  });
+    });
 });
