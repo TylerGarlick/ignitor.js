@@ -12,7 +12,6 @@ describe('helper', function () {
         expect(helper.db.collections.create).to.be.ok();
       });
     });
-
   });
 
   describe('objects', function () {
