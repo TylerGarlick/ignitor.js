@@ -1,3 +1,3 @@
-var ignitor = require('./src/ignitor');
+var ignitor = require('./lib/ignitor');
 exports = module.exports = ignitor
 
