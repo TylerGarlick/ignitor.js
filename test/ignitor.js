@@ -1,45 +1,35 @@
 'use strict';
 
 var ignitor = require('../lib')
-  , expect = require('expect.js')
-  ;
+    , expect = require('expect.js')
+    ;
 
-var connectionString = "http://test:test@localhost:8000/ignitor-testing";
-describe('ignitor', function () {
+describe('Ignitor', function () {
 
-  describe('properties', function () {
+    describe('Properties', function () {
 
-    describe('db', function () {
-      it('should have a property called db after connect is called', function () {
-        expect(ignitor.db).to.not.be.ok();
-        ignitor.connect(connectionString);
-        expect(ignitor.db).to.be.ok();
-        expect(ignitor.options.connectionUrl).to.be(connectionString);
-      });
+        describe('.Types', function () {
+            it("should have a 'Types' property", function () {
+                expect(ignitor.Types).to.be.ok();
+                expect(ignitor.Types.Model).to.be.func;
+                expect(ignitor.Types.Schema).to.be.func;
+            });
+        });
+
     });
 
-    describe('options', function () {
-      it('should have an options property', function () {
-        expect(ignitor.options).to.be.ok();
-      });
+    describe('_registry', function () {
+
+        it('should be empty and ok', function () {
+            expect(ignitor._registry).to.be.ok();
+            expect(ignitor._registry.all()).to.be.empty();
+        });
+
     });
 
-  });
-
-  describe('methods', function () {
-
-    describe('.connect(connectionUrl)', function () {
-      it('should have a connect method', function () {
-        expect(ignitor.connect).to.be.a.func;
-      });
-      it('should require connectionurl', function () {
-        expect(function () {
-          ignitor.connect();
-        }).to.throwError();
+    describe('#methods', function () {
 
 
-      });
     });
-  });
 
 });

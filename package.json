@@ -29,7 +29,8 @@
     "q": "~1.0.0",
     "arango": "~0.4.4",
     "i": "~0.3.2",
-    "dbc.js": "~1.0.1"
+    "dbc.js": "~1.0.1",
+    "inflect": "~0.3.0"
   },
   "devDependencies": {
     "expect.js": "~0.2.0",

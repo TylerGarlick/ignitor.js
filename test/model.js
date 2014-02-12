@@ -1,15 +1,16 @@
 'use strict';
 var expect = require('expect.js')
   , ignitor = require('../lib')
-  , Schema = ignitor.Schema
-  , Model = ignitor.Model
+  , Types = ignitor.Types
+  , Schema = Types.Schema
+  , Model = Types.Model
   ;
 
 
 describe('Model', function () {
 
-  describe('Constructor Options', function () {
-    describe('Schema Object', function () {
+  describe('#new', function () {
+    describe("new Model(schema) should register model successfully", function () {
       it('should instantiate with a Schema object', function () {
         var schema = new Schema({
           name: {
@@ -26,7 +27,7 @@ describe('Model', function () {
       });
     });
 
-    describe('Instance Object', function () {
+    describe("new Model(instance) should register add values to model successfully", function () {
       it('should instantiate with instance values', function () {
         var instance = {
           _key: 1234,
