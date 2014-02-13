@@ -21,8 +21,8 @@ describe('Ignitor', function () {
     describe('_registry', function () {
 
         it('should be empty and ok', function () {
-            expect(ignitor._registry).to.be.ok();
-            expect(ignitor._registry.all()).to.be.empty();
+            expect(ignitor.registry).to.be.ok();
+            expect(ignitor.registry.all()).to.be.empty();
         });
 
     });
