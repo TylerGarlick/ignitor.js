@@ -33,6 +33,8 @@ describe('Ignitor', function () {
                 age: 32,
                 active: true
             });
+
+
         });
     });
 
