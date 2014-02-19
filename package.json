@@ -1,43 +1,42 @@
 {
-  "name": "ignitor.js",
-  "version": "0.0.1",
-  "description": "ArangoDB's object data model",
-  "main": "./lib",
-  "scripts": {
-    "test": "mocha test",
-    "start": "index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/TylerGarlick/ignitor.js"
-  },
-  "keywords": [
-    "ArangoDB",
-    "ORM",
-    "ArangoDB",
-    "ODM",
-    "ODM"
-  ],
-  "author": "Tyler Garlick",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/TylerGarlick/ignitor.js/issues"
-  },
-  "homepage": "https://github.com/TylerGarlick/ignitor.js",
-  "dependencies": {
-    "inflection": "~1.3.3",
-    "lodash": "~2.4.1",
-    "q": "~1.0.0",
-    "arango": "~0.4.4",
-    "dbc.js": "~1.0.1",
-    "moment": "~2.5.1",
-    "minioc": "~0.2.0",
-    "jsonschema": "~0.4.0"
-  },
-  "devDependencies": {
-    "expect.js": "~0.2.0",
-    "mocha": "~1.17.1",
-    "gulp-util": "~2.2.12",
-    "gulp": "~3.4.0"
-  }
+    "name": "ignitor.js",
+    "version": "0.0.2",
+    "description": "ArangoDB's object data model",
+    "main": "./lib",
+    "scripts": {
+        "test": "mocha test",
+        "start": "index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TylerGarlick/ignitor.js"
+    },
+    "keywords": [
+        "arango",
+        "orm",
+        "odm",
+        "nosql",
+        "models",
+        "validation"
+    ],
+    "author": "Tyler Garlick",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/TylerGarlick/ignitor.js/issues"
+    },
+    "homepage": "https://github.com/TylerGarlick/ignitor.js",
+    "dependencies": {
+        "inflection": "~1.3.3",
+        "lodash": "~2.4.1",
+        "arango": "~0.4.4",
+        "moment": "~2.5.1",
+        "jsonschema": "~0.4.0",
+        "q": "~1.0.0"
+    },
+    "devDependencies": {
+        "expect.js": "~0.2.0",
+        "mocha": "~1.17.1",
+        "gulp-util": "~2.2.12",
+        "gulp": "~3.4.0"
+    }
 }
