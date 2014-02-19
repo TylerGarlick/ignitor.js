@@ -4,11 +4,12 @@
   "description": "ArangoDB's object data model",
   "main": "./lib",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test",
+    "start": "index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TylerGarlick/arangodb-odm.git"
+    "url": "https://github.com/TylerGarlick/ignitor.js"
   },
   "keywords": [
     "ArangoDB",
@@ -28,10 +29,10 @@
     "lodash": "~2.4.1",
     "q": "~1.0.0",
     "arango": "~0.4.4",
-    "i": "~0.3.2",
     "dbc.js": "~1.0.1",
-    "inflect": "~0.3.0",
-    "moment": "~2.5.1"
+    "moment": "~2.5.1",
+    "minioc": "~0.2.0",
+    "jsonschema": "~0.4.0"
   },
   "devDependencies": {
     "expect.js": "~0.2.0",
