@@ -2,7 +2,7 @@
 
 var expect = require('expect.js');
 var ignitor = require('../lib/ignitor');
-var dbUrl = "http://testing:testing@db.redrockethq.com:8529/ignitor-testing/";
+var dbUrl = "http://testing:testing@arangodb.cloudapp.net:8529/words";
 
 describe('Model', function () {
 
