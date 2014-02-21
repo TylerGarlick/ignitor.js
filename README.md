@@ -1,66 +1,67 @@
-Ignitor.js
+Ignitor
 ==========
-
-Ignitor.js is a ArangoDb(http://arangodb.org/) Object Data Modeling (ODM) framework similar to mongoose.
-
-Current Version
-v.0.3 =============
-
-
-
-This is a work on progress.
+Ignitor is a ArangoDb (http://arangodb.org/) Object Data Modeling (ODM) framework similar to mongoose, but different in a couple of other ways.  Ignitor uses the https://github.com/kaerus-component/arango library to access arango.  Again, ignitor is focused on access arango as much as the practicality of using models and objects to access the database.
 
 ## Installation
 ```js
 npm install ignitor.js
 ```
 
-### Usage
+### Basic Usage
 ```js
 var ignitor = require('ignitor.js');
 ```
-##### Connecting
-You can set the connection string or call the connect function directly, and the connection string will be assigned automatically.
+Now that you have an ignitor object, let's connect to arango.  Ignitor has a 'database connection manager'.  This means that you can set the connection url, and access this connection throughout your application.  
 
+#### Connecting
 ```js
-ignitor.connectionString = "";
-// or you can call teh
-Ignitor.connect(""); // this will save your connnectionString to Ignitor.connectionString
+var ignitor = require('ignitor.js');
+// For connection string formatting please reference:  https://github.com/kaerus-component/arango
+var db = ignitor.connect("http://localhost:8529/mydb");
+// db is now an arango connection, and you can access it anytime, db === ignitor.db
+var db = ignitor.db // this is an arango connection also
 ```
-By default the Ignitor.db will be your arango.db object (as in the arango client).
+You must call ignitor.connect(url) or set the ignitor.db.url ="" connection before using ignitor.js features.
+
+#### Repository
+The models are overlayed on top of a repository layer.  The repository is an abstraction on top of the arangodb client and largely is a passthough with useful functions.  You can use the repository directly.
 ```js
-Ignitor.db = arango.db; // the arango db is now set on the db object
-Ignitor.db.use('anotherDb'); // switch to another db
+var ignitor = require('ignitor.js');
+var repository = new ignitor.Repository('myCollection');
+
+// All (you can use a promise or a callback)
+repository.all()
+    .then(function(res){
+        res.result
+    })
+    .fail(function(err){
+        // something bad happened
+    });
+    
+// Find by Key
+repository.findByKey(key, 
+    function(err, res){
+        
+    });
 ```
-
-##### Models
-Models are essential to validation and setting up Querying (which is super awesome using the AQL).  Defining an model is simple.  Say we wanted a person model.
-
+#### Models
 ```js
-var Ignitor = require('ignitor.js')
-    , Schema = require('ignitor.js').Schema
-    ;
-
-var PersonSchema = new Schema({
-  name: {
-    type: 'string',
-    minLength: 2, // Optional
-    maxLength: 256 // Optional
-  },
-  age: {
-    type: 'numeric',
-    min: 0,
-    max: 99,
-    default: 18
-  },
-  isActive: {
-    type: 'boolean',
-    default: true
-  }
+var ignitor = require('ignitor.js');
+var Person = ignitor.Model('Person', {
+    name: { type: 'string', required: true }
 });
 
-var Person = Ignitor.model('Person', PersonSchema);
-module.exports = Person;
-
-
+var billy = new Person();
+billy.isValid // will be false because name is required
+billy.name = "Billy"; // how billy is valid
+billy.save()
+    .then(function(){
+        // do something...
+    });
 ```
+
+##Roadmap
+- Associations
+- More Testing
+- Examples
+- Screencast
