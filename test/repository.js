@@ -60,7 +60,6 @@ describe('Repository', function () {
         it('should execute an aql query', function (next) {
             repository.query("FOR word IN words LIMIT 10 RETURN word")
                 .then(function (words) {
-                    console.log(words);
                     expect(words).to.be.ok();
                     expect(words.length).to.be.equal(10);
                     next();
