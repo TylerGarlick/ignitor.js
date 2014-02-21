@@ -1,6 +1,6 @@
 {
     "name": "ignitor.js",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "ArangoDB's object data model",
     "main": "./lib",
     "scripts": {
