@@ -1,7 +1,12 @@
 Ignitor.js
 ==========
 
-Ignitor is a ArangoDD(http://arangodb.org/) Object Data Modeling(ODM) framework similar to mongoose.
+Ignitor.js is a ArangoDb(http://arangodb.org/) Object Data Modeling (ODM) framework similar to mongoose.
+
+Current Version
+v.0.3 =============
+
+
 
 This is a work on progress.
 

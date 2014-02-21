@@ -6,7 +6,7 @@ var dbUrl = "http://testing:testing@db.redrockethq.com:8529/ignitor-testing/";
 
 describe('Model', function () {
 
-    before(function () {
+    beforeEach(function () {
         ignitor.connect(dbUrl);
     });
 
@@ -24,6 +24,9 @@ describe('Model', function () {
                 homosapian = new Person({name: 'bob'});
                 expect(homosapian).to.be.ok();
                 expect(homosapian.isValid).to.be.equal(true);
+
+                console.log(Person);
+                expect(ignitor.db).to.be.ok();
             });
 
             it('should not let me register another Model of type Person', function () {
