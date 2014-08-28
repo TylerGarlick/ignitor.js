@@ -1,1 +1,1 @@
-module.exports = require('./lib/ignitor');
+require('traceur/bin/traceur-runtime');
