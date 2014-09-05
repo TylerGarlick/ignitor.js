@@ -1,8 +1,8 @@
-var Gulp = require('gulp')
-  , Traceur = require('gulp-traceur')
-  , SourceMaps = require('gulp-sourcemaps')
-  , Changed = require('gulp-changed')
-  , Del = require('del');
+var Gulp = require('gulp'),
+  Traceur = require('gulp-traceur'),
+  SourceMaps = require('gulp-sourcemaps'),
+  Changed = require('gulp-changed'),
+  Del = require('del');
 
 var paths = {
   dist: 'dist',
@@ -21,7 +21,7 @@ Gulp.task('compile', ['clean'], function () {
   return Gulp.src('src/**/*.js')
     .pipe(Changed(paths.dist))
     .pipe(SourceMaps.init())
-    .pipe(Traceur())
+    .pipe(Traceur({ modules: 'instantiate' }))
     .pipe(SourceMaps.write())
     .pipe(Gulp.dest(paths.dist));
 });

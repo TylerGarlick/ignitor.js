@@ -1,12 +1,19 @@
-var Promise = require('bluebird')
-  , _ = require('lodash')
-  , Validator = require('jsonschema').validate;
+var Promise = require('bluebird'), _ = require('lodash'), Validator = require('jsonschema').validate;
 
 import {database} from './database';
 
+/**
+ * Model
+ */
 export class Model {
 
-  constructor(collection, properties) {
+  /**
+   * Model constructor
+   * @constructor
+   * @param collection
+   * @param properties
+   */
+    constructor(collection, properties) {
     this._key = null;
     this._rev = null;
     this._id = null;
@@ -14,7 +21,7 @@ export class Model {
     this.collection = collection;
     this.properties = properties;
     this.methods = {};
-    this.db = Promise.promisifyAll(database.db);
+    //this.db = Promise.promisifyAll(database.db);
 
     this.hooks = {
       validating: {
@@ -56,7 +63,7 @@ export class Model {
   }
 
   static findByKey(id) {
-    return this.db.simple.firstByExampleAsync(this.collection, { _key: id});
+    return this.db.simple.firstByExampleAsync(this.collection, { _key: id });
   }
 
   static find(predicate, options = {}) {
