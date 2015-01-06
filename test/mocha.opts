@@ -1,7 +1,5 @@
---require expect.js
+--require chai
 --recursive
 --colors
 --ui bdd
---reporter Spec
---growl
 --slow 75
