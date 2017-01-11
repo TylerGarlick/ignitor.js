@@ -1,5 +1,0 @@
---require chai
---recursive
---colors
---ui bdd
---slow 75

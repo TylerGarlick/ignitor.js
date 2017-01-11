@@ -1,1 +1,1 @@
-module.exports = require('./lib/ignitor');
+module.exports = require('./dist');
