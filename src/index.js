@@ -1,58 +1,40 @@
 import Arango from 'arangojs';
-import Utilities from './utilities';
-
+import Query from './query';
+import Collections from './collections';
+import Collection from './collection';
 
 export Model from './model';
 
-/**
- * Ignitor.js
- *
- *
- * @param {object|string} [connection] -
- * @param {object} options
- *
- * @returns {{db}}
- */
-export default (connection, { autoCreateDb = true } = {}) => {
-  
-  let url = 'connection';
-  if (typeof(connection) !== 'string') {
-    url = Utilities.urls.convert(connection);
-  } else {
-    url = connection.toString();
-  }
-  
-  const db = Arango({ url, databaseName: false });
-  
-  
-  return {
-    db,
-    
-    async setup({ databaseName = '', autoCreateDb = true } = {}) {
-      const databases = await db.listDatabases();
-      if (databaseName && !databases.includes(databaseName) && autoCreateDb) {
-        const info = await db.createDatabase(databaseName);
-        console.log(info);
-        console.log(db.createDatabase);
-        console.log(databases.includes('bogus'));
-        console.log(databases);
-      }
-    }
-  }
-  
-};
 
+export default class {
 
-class Ignitor {
-  
-  constructor() {
-    
+  constructor(url = '', databaseName = '', options = {}) {
+    this.db = Arango({ url, databaseName});
+
+    this.query = new Query(this.db);
+    this.collections = new Collections(this.db);
+
+//    return new Proxy(this, {
+//
+//      get: (target, prop) => {
+//        if(!target[prop]) {
+//          if(this.collections.exists(prop) && typeof(prop) !== 'object') {
+//            console.log(prop);
+//
+////            console.log(prop);
+////            this[prop] = new Collection(this.db, prop);
+////            console.log(prop);
+//          }
+//
+//        }
+//
+//
+//
+////        console.log(receiver);
+//
+//
+//      }
+//    });
   }
-  
-  
-  async setup() {
-    
-  }
-  
-  
+
 }
