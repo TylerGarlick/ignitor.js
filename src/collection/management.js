@@ -1,26 +1,25 @@
-import Indexes from './indexes';
+export default (db, name) => {
 
-export default class {
+  const collection = db.collection(name);
 
-  constructor(db, collection) {
-    this.collection = db.collection(collection);
-    this.indexes = new Indexes(db, collection);
-  }
+  return {
 
-  async get() {
-    return await this.collection.get();
-  }
+    async get() {
+      return await collection.get();
+    },
 
-  async rename(name) {
-    return await this.collection.rename(name);
-  }
+    async rename(name) {
+      return await collection.rename(name);
+    },
 
-  async clearAll() {
-    return await this.collection.truncate();
-  }
+    async clearAll() {
+      return await collection.truncate();
+    },
 
-  async drop() {
-    return await this.collection.drop();
-  }
+    async drop() {
+      return await collection.drop();
+    }
 
-}
+  };
+
+};

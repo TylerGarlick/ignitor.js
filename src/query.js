@@ -1,16 +1,14 @@
-export default class {
+export default (db) => {
 
-  constructor(db) {
-    this.db = db;
-  }
+  return {
+    async execute(query, params) {
+      return await db.query(query, params);
+    },
 
-  async execute(query, params) {
-    return await this.db.query(query, params);
-  }
+    async executeAll(query, params) {
+      const cursor = await this.execute(query, params);
+      return await cursor.all();
+    }
+  };
 
-  async executeAll(query, params) {
-    const cursor = await this.execute(query, params);
-    return await cursor.all();
-  }
-
-}
+};

@@ -1,31 +1,32 @@
-export default class {
+export default (db, name) => {
 
-  constructor(db, collection) {
-    this.collection = db.collection(collection);
-  }
+  const collection = db.collection(name);
 
-  async all() {
-    return await this.collection.indexes();
-  }
+  return {
 
-  async get(name) {
-    return await this.collection.index(name);
-  }
+    async all() {
+      return await collection.indexes();
+    },
 
-  async create(options = {}) {
-    return await this.collection.createIndex(options);
-  }
+    async get(name) {
+      return await collection.index(name);
+    },
 
-  async drop(name) {
-    return await this.collection.dropIndex(name);
-  }
+    async create(options = {}) {
+      return await collection.createIndex(options);
+    },
 
-  async createGeoIndex(fields = [], options = {}) {
-    return await this.collection.createGeoIndex(fields, options);
-  }
+    async drop(name) {
+      return await collection.dropIndex(name);
+    },
 
-  async createFulltextIndex(fields = [], options = {}) {
-    return await this.collection.createFulltextIndex(fields, options);
-  }
+    async createGeoIndex(fields = [], options = {}) {
+      return await collection.createGeoIndex(fields, options);
+    },
 
-}
+    async createFulltextIndex(fields = [], options = {}) {
+      return await collection.createFulltextIndex(fields, options);
+    }
+  };
+
+};
