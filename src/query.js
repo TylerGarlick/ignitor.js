@@ -9,7 +9,8 @@ export default class {
   }
 
   async executeAll(query, params) {
-    return (await this.execute(query, params)).all();
+    const cursor = await this.execute(query, params);
+    return await cursor.all();
   }
 
 }

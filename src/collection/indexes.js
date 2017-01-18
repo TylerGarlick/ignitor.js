@@ -1,8 +1,7 @@
 export default class {
 
   constructor(db, collection) {
-    this.db = db;
-    this.collection = this.db.collection(collection);
+    this.collection = db.collection(collection);
   }
 
   async all() {

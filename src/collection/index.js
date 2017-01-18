@@ -1,11 +1,17 @@
 import Management from './management';
+import Indexes from './indexes';
 
 export default class {
 
-  constructor(db, name) {
-    this.collection = this.db.collection(name);
+  get collection(){
+    return this.db.collection(this.name);
+  }
 
+  constructor(db, name) {
+    this.db = db;
+    this.name = name;
     this.management = new Management(db, name);
+    this.indexes = new Indexes(db, name);
   }
 
   async all(options = {}) {

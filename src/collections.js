@@ -9,15 +9,23 @@ export default class {
   }
 
   async get(name) {
-    return await this.collection(name).get();
+    const collection = this.db.collection(name);
+    return await collection.get();
   }
 
   async create(name, options) {
-    return await this.collection(name).create(options);
+    const collection = this.db.collection(name);
+    return await collection.create(options);
+  }
+
+  async drop(name) {
+    const collection = this.db.collection(name);
+    return await collection.drop();
   }
 
   async exists(name) {
-    return await this.all().includes(name);
+    const collections = await this.all();
+    return collections.some(c => c.name === name);
   }
 
 }
